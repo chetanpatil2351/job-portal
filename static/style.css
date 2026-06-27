@@ -167,4 +167,45 @@ body::after {
     .hero-img {
         margin-top: 30px;
     }
+}/* ===========================
+   INPUT FIX (ADD AT END)
+   =========================== */
+
+.form-control,
+.form-control:focus {
+    background: #020617 !important;
+    border: 1px solid #334155 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    caret-color: #ffffff !important;
+    box-shadow: none !important;
+}
+
+.form-control::placeholder {
+    color: #94a3b8 !important;
+}
+
+/* Text & Email */
+input[type="text"],
+input[type="email"] {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Password Field */
+input[type="password"] {
+    background: #020617 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    caret-color: #ffffff !important;
+}
+
+/* Autofill Fix (Chrome / Brave / Edge) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px #020617 inset !important;
+    -webkit-text-fill-color: #ffffff !important;
+    transition: background-color 9999s ease-in-out 0s;
 }
