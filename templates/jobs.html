@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container mt-4">
+
+<form method="GET" class="mb-3">
+<input class="form-control" name="search" placeholder="Search by location">
+</form>
+
+<div class="row">
+{% for job in jobs %}
+<div class="col-md-4">
+<div class="card p-3 m-2 shadow">
+
+<h5>{{ job['title'] }}</h5>
+<p>{{ job['description'] }}</p>
+<p>₹ {{ job['wage'] }}</p>
+<p>{{ job['location'] }}</p>
+
+{% if session['role']=='worker' %}
+<a href="/apply/{{ job['id'] }}" class="btn btn-success">Apply</a>
+{% endif %}
+
+</div>
+</div>
+{% endfor %}
+</div>
+
+</div>
+
+{% endblock %}

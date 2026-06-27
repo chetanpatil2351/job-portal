@@ -1,0 +1,156 @@
+/* 🔷 GLOBAL DARK BACKGROUND */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+
+    background: linear-gradient(135deg, #0f172a, #020617);
+    color: #e2e8f0;
+    min-height: 100vh;
+}
+
+/* 🔷 NAVBAR */
+.navbar {
+    padding: 15px;
+    background: #020617;
+}
+
+.nav-link {
+    margin-right: 15px;
+    font-weight: 500;
+    color: #cbd5e1 !important;
+}
+
+.nav-link:hover {
+    color: #ffffff !important;
+}
+
+/* 🔷 HERO SECTION */
+.hero-section {
+    padding: 100px 0;
+}
+
+/* 🔷 TITLE */
+.hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #f8fafc;
+}
+
+/* 🔷 SEARCH BOX */
+.search-box {
+    display: flex;
+    background: #1e293b;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    gap: 10px;
+}
+
+/* 🔷 INPUT */
+.search-box input {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 12px;
+    flex: 1;
+    color: #e2e8f0;
+}
+
+.search-box input::placeholder {
+    color: #94a3b8;
+}
+
+/* 🔷 BUTTON (WHITE BORDER STYLE) */
+.search-box button {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+/* 🔷 GLOBAL BUTTON STYLE */
+.btn {
+    background: transparent !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background: #ffffff !important;
+    color: #020617 !important;
+}
+
+/* 🔷 IMAGE */
+.hero-img {
+    max-width: 85%;
+    border-radius: 10px;
+}
+
+/* 🔷 CARDS / CONTAINERS */
+.container, .card, .form-control, .table {
+    background: rgba(30, 41, 59, 0.85) !important;
+    border-radius: 12px;
+    color: #e2e8f0;
+}
+
+/* 🔷 INPUT FIELDS */
+.form-control {
+    background: #020617;
+    border: 1px solid #334155;
+    color: #e2e8f0;
+}
+
+.form-control::placeholder {
+    color: #94a3b8;
+}
+
+/* 🔷 TABLE */
+.table {
+    color: #e2e8f0;
+}
+
+/* 🔷 SOFT BACKGROUND GLOW */
+body::before {
+    content: "";
+    position: fixed;
+    top: -80px;
+    right: -80px;
+    width: 300px;
+    height: 300px;
+    background: #ffffff;
+    border-radius: 50%;
+    opacity: 0.05;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    bottom: -80px;
+    left: -80px;
+    width: 300px;
+    height: 300px;
+    background: #38bdf8;
+    border-radius: 50%;
+    opacity: 0.05;
+}
+
+/* 🔷 RESPONSIVE */
+@media(max-width:768px){
+
+    .hero-title {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .hero-img {
+        margin-top: 30px;
+    }
+}

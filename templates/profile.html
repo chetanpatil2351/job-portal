@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container mt-5 text-center">
+<h2>User Profile</h2>
+
+<p><b>Name:</b> {{ session['user'] }}</p>
+<p><b>Role:</b> {{ session['role'] }}</p>
+
+</div>
+
+{% endblock %}
