@@ -1,32 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
 
-<div class="container form-container">
+<div class="container form-container py-5">
     <div class="row justify-content-center">
-        <div class="col-md-4">
+        <div class="col-md-5">
 
-            <div class="card shadow p-4">
-                <h2 class="text-center">Register</h2>
+            <div class="card shadow-lg p-4">
 
-                <form method="POST">
-                    <input class="form-control my-2" name="name" placeholder="Name">
-                    <input class="form-control my-2" name="email" placeholder="Email">
-                    <input class="form-control my-2" type="password" name="password" placeholder="Password">
+                <h2 class="text-center mb-4">Register</h2>
 
-                    <select class="form-control my-2" name="role">
+                <form method="POST" autocomplete="off">
+
+                    <input
+                        type="text"
+                        class="form-control mb-3"
+                        name="name"
+                        placeholder="Name"
+                        required>
+
+                    <input
+                        type="email"
+                        class="form-control mb-3"
+                        name="email"
+                        placeholder="Email"
+                        required>
+
+                    <input
+                        type="password"
+                        class="form-control mb-3"
+                        id="password"
+                        name="password"
+                        placeholder="Password"
+                        autocomplete="new-password"
+                        required>
+
+                    <select class="form-control mb-3" name="role">
                         <option value="worker">Worker</option>
                         <option value="employer">Employer</option>
                     </select>
 
-                    <button class="btn btn-primary w-100 mt-2">Register</button>
+                    <button class="btn btn-primary w-100">
+                        Register
+                    </button>
+
                 </form>
 
             </div>

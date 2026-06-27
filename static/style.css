@@ -153,4 +153,18 @@ body::after {
     .hero-img {
         margin-top: 30px;
     }
+}@media(max-width:768px){
+
+    .hero-title {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .hero-img {
+        margin-top: 30px;
+    }
 }
