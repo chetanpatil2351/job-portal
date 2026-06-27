@@ -7,7 +7,9 @@ app.secret_key = "secret123"
 
 # Database Path
 def get_db():
-    db_path = os.path.join(os.path.expanduser("~"), "Documents", "job_portal.db")
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    db_path = os.path.join(BASE_DIR, "job_portal.db")
+
     conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row
     return conn
